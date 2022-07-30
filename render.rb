@@ -5,21 +5,21 @@
 class Render < Formula
   desc "Rendering files using Sigil templating."
   homepage "https://github.com/winebarrel/render"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/render/releases/download/v1.0.0/render_1.0.0_darwin_arm64.tar.gz"
-      sha256 "014145b890d768245767f0b5b51f7690dcc292cdd9fb444158aa0b0a67a581d7"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/render/releases/download/v1.0.1/render_1.0.1_darwin_amd64.tar.gz"
+      sha256 "8c0f277093954bef46c75d4811612fdbedf311d2212911312ef55bee2fad97ae"
 
       def install
         bin.install 'render'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/render/releases/download/v1.0.0/render_1.0.0_darwin_amd64.tar.gz"
-      sha256 "37c375068c7fa5eb6622c5b55d72a5eca1d0bc053efbca2fc9329f44faa9f4e1"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/render/releases/download/v1.0.1/render_1.0.1_darwin_arm64.tar.gz"
+      sha256 "eef04f2ca3736fd3c46959d075ffebc7efc1b19c50e5b2f508563acc6dd65319"
 
       def install
         bin.install 'render'
@@ -28,17 +28,17 @@ class Render < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/render/releases/download/v1.0.0/render_1.0.0_linux_arm64.tar.gz"
-      sha256 "b985ffc6c485f627112ad36df5edbde38d238dc0ba9f6c99a7e2f07be39e14b5"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/render/releases/download/v1.0.1/render_1.0.1_linux_amd64.tar.gz"
+      sha256 "6077b45b2fffa769188810ce98cd867421001889a1f2bd1212d1a9975803ca5d"
 
       def install
         bin.install 'render'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/render/releases/download/v1.0.0/render_1.0.0_linux_amd64.tar.gz"
-      sha256 "87501d3e3bf5aba4221202f49220ed1c6e23373cd4c23760049453f06708f9ea"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/render/releases/download/v1.0.1/render_1.0.1_linux_arm64.tar.gz"
+      sha256 "21369c993df9274e3dc6dbf767b3739d70578f8e7bec54a4a5bfeed283a05207"
 
       def install
         bin.install 'render'
