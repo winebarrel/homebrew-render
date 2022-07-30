@@ -5,21 +5,21 @@
 class Render < Formula
   desc "Rendering files using Sigil templating."
   homepage "https://github.com/winebarrel/render"
-  version "1.0.1"
+  version "1.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/render/releases/download/v1.0.1/render_1.0.1_darwin_amd64.tar.gz"
-      sha256 "8c0f277093954bef46c75d4811612fdbedf311d2212911312ef55bee2fad97ae"
+      url "https://github.com/winebarrel/render/releases/download/v1.0.2/render_1.0.2_darwin_amd64.tar.gz"
+      sha256 "58ee4efa656ca1ac7c50ac3458c5ef77a2efe597cd184b48b97484526b9a4e5e"
 
       def install
         bin.install 'render'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/render/releases/download/v1.0.1/render_1.0.1_darwin_arm64.tar.gz"
-      sha256 "eef04f2ca3736fd3c46959d075ffebc7efc1b19c50e5b2f508563acc6dd65319"
+      url "https://github.com/winebarrel/render/releases/download/v1.0.2/render_1.0.2_darwin_arm64.tar.gz"
+      sha256 "edb70d0a1561df0f9a6a64037af288db40df6e875f202cf070bbdaffbee991a4"
 
       def install
         bin.install 'render'
@@ -29,16 +29,16 @@ class Render < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/render/releases/download/v1.0.1/render_1.0.1_linux_amd64.tar.gz"
-      sha256 "6077b45b2fffa769188810ce98cd867421001889a1f2bd1212d1a9975803ca5d"
+      url "https://github.com/winebarrel/render/releases/download/v1.0.2/render_1.0.2_linux_amd64.tar.gz"
+      sha256 "b61ee5968603c9ab60fa95fa63321de6a52a1b5411ce429cdf293a1d463be6f0"
 
       def install
         bin.install 'render'
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/render/releases/download/v1.0.1/render_1.0.1_linux_arm64.tar.gz"
-      sha256 "21369c993df9274e3dc6dbf767b3739d70578f8e7bec54a4a5bfeed283a05207"
+      url "https://github.com/winebarrel/render/releases/download/v1.0.2/render_1.0.2_linux_arm64.tar.gz"
+      sha256 "7cf67d83799566ccf5b1c5fa8a5093d664c67d10ef513ba78e546a44b3d7b330"
 
       def install
         bin.install 'render'
